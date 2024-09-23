@@ -1,11 +1,7 @@
-// Node.js 預設使用的是 CommonJS 模組系統，但如果你想使用 ES 模組的 import/export 語法
-// 1. 打開專案中的 package.json 檔案。
-// 2. 加入 "type": "module" 屬性，讓 Node.js 知道這個專案使用 ES 模組系統。
-
 {
   "name": "week-2",
   "version": "1.0.0",
-  "type" : "module", // 告訴 Node.js 使用 ES 模組系統
+  "type" : "module",  
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

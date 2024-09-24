@@ -1,12 +1,16 @@
+接續你提供的文件格式，這是如何修改 `package.json` 的說明。
+
+---
+
 # Week 2 Homework
 
 ## 安裝的 Node.js 版本
 
 1. **安裝哪個版本？**
-   - 安裝的是 Node.js 的 LTS（Long Term Support，長期支持）版本，因為這是最穩定且經過長期維護的版本。目前（截至 2024/09），Node.js 的 LTS 版本是  v20.17.0。
+   - 安裝的是 Node.js 的 LTS（Long Term Support，長期支持）版本，因為這是最穩定且經過長期維護的版本。目前（截至 2024/09），Node.js 的 LTS 版本是 v20.17.0。
 
 2. **為什麼？**
-   - LTS 版本的 Node.js 通常比最新的 Current 版本更穩定，且適合用於生產環境。LTS 版本會獲得長期的安全更新和修復，因此它對於穩定性有較高的保障。而最新的 Current 版本雖然可能包含一些新功能，但這些功能可能還不夠穩定或存在潛在的 bug。因此，選擇 LTS 版本是一種平衡穩定性與功能性需求的最佳做法。
+   - LTS 版本的 Node.js 通常比最新的 Current 版本更穩定，較適合用於生產環境。LTS 版本會獲得長期的安全更新和修復，因此它對於穩定性有較高的保障。而最新的 Current 版本雖然可能包含一些新功能，但這些功能可能還不夠穩定或存在潛在的 bug。因此，選擇 LTS 版本是一種平衡穩定性與功能性需求的最佳做法。
 
 ### 如果不是安裝 Node.js，那可以試著說明為什麼？（技術選型問題）
 
@@ -40,3 +44,69 @@
    - 初始化專案：`npm init`
 
 nvm 主要用於管理 Node.js 版本，而 npm 則是用於管理專案所需的第三方套件，這兩者各司其職，互相搭配來提高開發效率。
+
+---
+
+### 修改 `package.json` 的內容與說明
+
+`package.json` 是用來設定 Node.js 專案的基本資訊和模組配置的檔案。在「D. 程式題: Stack」專案中需要以 Module 的方式匯出 (ESM) Stack module，因此需要在 `package.json` 檔案中加入 `"type": "module"`，因為我們想使用現代的 ES 模組 (`import/export`) 而不是 Node.js 預設的 CommonJS 模組 (`require/module.exports`)，修改如下所示：
+
+#### 1. 原始 `package.json` 檔案：
+```json
+{
+  "name": "week-2",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+```
+
+#### 2. 修改後的 `package.json` 檔案：
+```json
+{
+  "name": "week-2",
+  "version": "1.0.0",
+  "type": "module",  // 加入這行來啟用 ES 模組
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+```
+
+#### 3. 為什麼要加入 `"type": "module"`？
+
+在 Node.js 中，預設情況下 `.js` 檔案會使用 CommonJS 模組系統，即使用 `require()` 和 `module.exports` 來進行模組的匯入和匯出。然而，如果我們希望使用現代 JavaScript 的 ES 模組語法（即 `import` 和 `export`），就必須在 `package.json` 中加入 `"type": "module"`。
+
+- **使用 ES 模組的好處**：ES 模組是 JavaScript 語言的標準模組系統，適合現代化的模組管理和開發，並且在瀏覽器和 Node.js 之間具有更好的兼容性。
+  
+- **避免錯誤**：如果你不加入 `"type": "module"` 而直接使用 `import/export`，Node.js 會拋出錯誤，因為它預設情況下還是使用 CommonJS 模組系統。
+
+#### 4. 加入 `"type": "module"` 後的效果：
+
+- **匯出模組**：可以使用 `export` 和 `export default` 將模組的函式或類別匯出。
+- **匯入模組**：可以使用 `import` 語法將模組匯入到其他檔案。
+
+例如：
+```javascript
+// stack.js (使用 ES 模組)
+export default class Stack {
+    // 類別實作...
+}
+
+// main.js
+import Stack from './stack.js';  // 使用 ES 模組的 import 語法
+```
+
+加入 `"type": "module"` 後，你的專案就能正確使用 `import` 和 `export`，符合現代 JavaScript 開發需求。
+

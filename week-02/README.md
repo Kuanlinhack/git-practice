@@ -1,7 +1,3 @@
-接續你提供的文件格式，這是如何修改 `package.json` 的說明。
-
----
-
 # Week 2 Homework
 
 ## 安裝的 Node.js 版本

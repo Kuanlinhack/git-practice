@@ -1,6 +1,6 @@
 # W05
 網址:[個人作業4＿網址](https:// )，點擊過去可以看到個人作業 4 架設的 Express server。  
-1. 你在哪裡購買網域的？
+1. 你在哪裡購買網域的？  
   **GoDaddy**
 2. DNS 的 A record 是什麼？  
 DNS 的 **A record（Address Record）** 是 DNS 記錄的一種，它將域名（例如`example.com`）映射到一個**IPv4地址**。當用戶輸入一個網域名稱時，DNS 系統會查找對應的 A 記錄，然後將這個名稱轉換為一個 IP 地址，幫助瀏覽器找到並連接到對應的伺服器。

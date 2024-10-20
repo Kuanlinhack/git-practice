@@ -5,7 +5,7 @@
 2. DNS 的 A record 是什麼？  
 DNS 的 **A record（Address Record）** 是 DNS 記錄的一種，它將域名（例如`example.com`）映射到一個**IPv4地址**。當用戶輸入一個網域名稱時，DNS 系統會查找對應的 A 記錄，然後將這個名稱轉換為一個 IP 地址，幫助瀏覽器找到並連接到對應的伺服器。
 
-**簡單比喻**：A record 就像是電話簿，將人名（域名）對應到一個具體的電話號碼（IPv4 地址），讓你能撥通對方。
+ **簡單比喻**：A record 就像是電話簿，將人名（域名）對應到一個具體的電話號碼（IPv4 地址），讓你能撥通對方。
 
 3. DNS 的 NS record 是什麼？  
 **NS record（Name Server Record）** 是另一種 DNS 記錄，它指定哪個伺服器負責處理這個網域的 DNS 查詢。簡單來說，它告訴 DNS 系統「這個網域的 DNS 查詢要去這些指定的 Name Servers 查詢」，這些 Name Servers 通常是由網域註冊商或你所選的 DNS 提供商提供的。

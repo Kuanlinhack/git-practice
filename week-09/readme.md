@@ -7,7 +7,8 @@
 
 ## Step 1：改掉配置文件中的語法問題
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/da404172-ebb3-4dab-a6c0-71d5b5e87223/3a62d3c9-c627-48d2-ae47-5cc2e5f2dfa1/image.png)
+![image.png](https://github.com/Kuanlinhack/git-practice/blob/main/week-09/images/image.png)
+
 
 The error message indicates that there is a syntax error (`unexpected ";"`) in the NGINX configuration file, specifically at line 8 of `/etc/nginx/nginx.conf`.
 
@@ -15,13 +16,13 @@ The error message indicates that there is a syntax error (`unexpected ";"`) in t
 
 ## Step 2： Kill 佔用 80 port 的程序
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/da404172-ebb3-4dab-a6c0-71d5b5e87223/2a76ca28-68d6-4c17-be38-90a8f217b7a3/image.png)
+![image.png](https://github.com/Kuanlinhack/git-practice/blob/main/week-09/images/image2.png)
 
 The error message `bind() to 0.0.0.0:80 failed (98: Address already in use)` means that another process is already using port 80, which is preventing NGINX from binding to it.
 
 解決方案：
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/da404172-ebb3-4dab-a6c0-71d5b5e87223/0e790c3d-e7c5-42ad-a547-d6c0f310e404/image.png)
+![image.png](https://github.com/Kuanlinhack/git-practice/blob/main/week-09/images/image3.png)
 
 ⇒ sudo kill 576
 

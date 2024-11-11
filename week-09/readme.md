@@ -28,7 +28,7 @@ The error message `bind() to 0.0.0.0:80 failed (98: Address already in use)` mea
 
 ## Step 3： 處理防火牆問題
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/da404172-ebb3-4dab-a6c0-71d5b5e87223/59abd77f-7107-4d91-9aa4-91c95b2e99c4/image.png)
+![image.png](https://github.com/Kuanlinhack/git-practice/blob/main/week-09/images/image4.png)
 
 解決方法：
 
@@ -40,7 +40,7 @@ The error message `bind() to 0.0.0.0:80 failed (98: Address already in use)` mea
 
 ## Step 4： 處理網頁權限問題
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/da404172-ebb3-4dab-a6c0-71d5b5e87223/a0d96d44-b62b-488a-9a79-3c54ae814de2/image.png)
+![image.png](https://github.com/Kuanlinhack/git-practice/blob/main/week-09/images/image5.png)
 
 解決方案：sudo chmod 644 /var/myweb/index.html
 

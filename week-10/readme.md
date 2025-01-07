@@ -18,7 +18,7 @@ sudo apt install stress -y
 stress --cpu 2 --timeout 300
 ```
 
-![Alarm email](https://github.com/Kuanlinhack/git-practice/blob/main/week10/images/Alarm%20email.png)
+![Alarm email](https://github.com/Kuanlinhack/git-practice/blob/main/week-10/images/Alarm%20email.png)
 
 # 進階題
 
